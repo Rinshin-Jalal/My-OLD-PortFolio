@@ -59,6 +59,13 @@
   font-size: 26px;
 }
 
+.navmain nav .navbar a:hover {
+  font-size: 30px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: #fff;
+}
+
 @media screen and (max-width: 768px) {
   .navmain .menu {
     display: block;

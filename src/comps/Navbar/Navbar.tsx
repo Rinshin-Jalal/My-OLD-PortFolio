@@ -32,6 +32,7 @@ const Navbar = () => {
             <motion.img
               initial={{ scale: 0, rotate: -360 }}
               animate={{ rotate: 0, scale: 1 }}
+              whileHover={{ rotate: [30, 0, -30, 0], scale: [1.1, 1, 1.1, 1] }}
               transition={{
                 type: "spring",
                 stiffness: 260,

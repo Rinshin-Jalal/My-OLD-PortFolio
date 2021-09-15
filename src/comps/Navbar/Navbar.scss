@@ -35,6 +35,11 @@
       a {
         margin-right: 20px;
         font-size: 26px;
+        &:hover {
+          font-size: 30px;
+          transition: 1s;
+          color: #fff;
+        }
       }
     }
   }
