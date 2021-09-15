@@ -1,0 +1,22 @@
+div .notfound {
+  width: 80%;
+  background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-backdrop-filter: blur(60px);
+          backdrop-filter: blur(60px);
+  border-radius: 16px;
+  font-family: var(--font-base);
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+div .notfound h1 {
+  text-shadow: 2px 2px 1px #fd5050;
+  color: #ff5050;
+  font-size: 200px;
+}
+
+div .notfound p {
+  font-size: 60px;
+}
+/*# sourceMappingURL=NotFound.css.map */

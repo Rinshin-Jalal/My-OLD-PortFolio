@@ -1,0 +1,24 @@
+div {
+  .notfound {
+    width: 80%;
+    background: linear-gradient(
+      152.97deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    backdrop-filter: blur(60px);
+    border-radius: 16px;
+    font-family: var(--font-base);
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    h1 {
+      text-shadow: 2px 2px 1px rgb(253, 80, 80);
+      color: rgb(255, 80, 80);
+      font-size: 200px;
+    }
+    p {
+      font-size: 60px;
+    }
+  }
+}

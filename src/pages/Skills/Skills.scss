@@ -1,0 +1,73 @@
+.skills {
+  width: 80%;
+  margin: 20px auto;
+  margin-bottom: 60px;
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+
+    .right {
+      .glass-box {
+        border-radius: 30px;
+        padding: 20px;
+        .grp {
+          margin: 0 10px;
+          h1 {
+            font-family: var(--font-base);
+            font-size: 25px;
+            line-height: 38px;
+          }
+          .bar {
+            width: 100%;
+            margin: 20px 0;
+            border-radius: 30px;
+            height: 8px;
+            background: #bbb;
+            .barscore {
+              background: #000;
+              height: 100%;
+              position: relative;
+              left: -1px;
+              border-radius: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .skills {
+    width: 95%;
+    margin: 0 auto;
+    section {
+      gap: 10px;
+      grid-template-columns: auto;
+
+      .left,
+      .right {
+        width: 100%;
+        .glass-box {
+          border-radius: 30px;
+          padding: 10px;
+          width: 90%;
+          margin: 0 auto;
+          .grp {
+            max-width: 700px;
+            .bar {
+              margin: 10px auto;
+            }
+          }
+        }
+      }
+      .left {
+        padding: 20px;
+        // margin-bottom: 30px;
+      }
+    }
+  }
+}

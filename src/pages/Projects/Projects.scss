@@ -1,0 +1,124 @@
+.projects {
+  width: 90%;
+  margin: 0 auto;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .articles {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 40px;
+    padding: 30px;
+    margin-bottom: 40px;
+    z-index: -1;
+
+    .article {
+      padding: 5px;
+      min-width: 200px;
+      background: linear-gradient(
+        152.97deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      backdrop-filter: blur(60px);
+      transition: 2s;
+      border-radius: 16px;
+      max-width: 400px;
+      position: relative;
+      box-shadow: 0px 2px 4px 0px #00000040;
+
+      &:hover {
+        color: aqua;
+        background: rgb(0, 0, 0);
+      }
+
+      img {
+        aspect-ratio: 16/9;
+        width: 100%;
+        transition: 1s;
+        border-radius: 16px;
+      }
+      a {
+        background-color: #00000040;
+        backdrop-filter: blur(25px);
+        border-radius: 16px;
+        display: inline;
+        font-family: var(--font-2);
+        font-size: 36px;
+        font-weight: bold;
+        color: #ccc;
+        padding: 15px 20px;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        transition: 1s;
+        // border: 1px solid #fff;
+
+        &:hover {
+          color: #f0f;
+          transition: 2s;
+
+          background: linear-gradient(
+            152.97deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          //   opacity: 1;
+        }
+      }
+
+      svg {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        path {
+          border: 1px solid #fff;
+        }
+      }
+
+      .desc {
+        padding: 10px 20px;
+        font-family: var(--font-base);
+        font-size: 14px;
+        p {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .projects {
+    .articles {
+      grid-template-columns: auto auto;
+
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .projects {
+    padding: 0;
+    .articles {
+      padding: 0;
+      grid-template-columns: auto;
+
+      .article {
+        max-width: 700px;
+        a {
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
+}

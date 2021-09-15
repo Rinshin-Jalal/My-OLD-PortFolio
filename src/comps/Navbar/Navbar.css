@@ -1,0 +1,100 @@
+.navmain {
+  font-family: var(--font-base);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  -webkit-transition: 2s;
+  transition: 2s;
+  width: 100%;
+}
+
+.navmain .menu,
+.navmain .close {
+  display: none;
+}
+
+.navmain nav {
+  background: #030018;
+  -webkit-transition: 2s;
+  transition: 2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.navmain nav .logo-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navmain nav .logo-div .logo {
+  width: 50px;
+}
+
+.navmain nav .logo-div h1 {
+  color: #fff;
+  font-size: 40px;
+  margin-left: 20px;
+}
+
+.navmain nav .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navmain nav .navbar a {
+  margin-right: 20px;
+  font-size: 26px;
+}
+
+@media screen and (max-width: 768px) {
+  .navmain .menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .navmain nav {
+    padding: 0;
+    padding-top: 20px;
+    display: none;
+  }
+  .navmain.respo .menu {
+    display: none;
+  }
+  .navmain.respo nav {
+    display: block;
+  }
+  .navmain.respo nav .close {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .navmain.respo nav .logo-div .logo {
+    width: 40px;
+  }
+  .navmain.respo nav .logo-div h1 {
+    font-size: 30px;
+  }
+  .navmain.respo nav .navbar {
+    margin-top: 20px;
+    display: block;
+  }
+  .navmain.respo nav .navbar li {
+    padding: 20px;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

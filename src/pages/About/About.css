@@ -1,0 +1,76 @@
+.about {
+  width: 80%;
+  margin: 20px auto;
+  margin-bottom: 60px;
+}
+
+.about section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.about section .right .glass-box {
+  padding: 20px;
+  text-align: center;
+}
+
+.about section .right .glass-box h2 {
+  font-family: var(--font-2);
+  font-size: 40px;
+  color: #c7c7c7;
+}
+
+.about section .right .glass-box p {
+  font-family: var(--font-base);
+  font-size: 17px;
+  line-height: 19px;
+}
+
+.about section .right .glass-box .image img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ebebeb;
+}
+
+.about section .right .glass-box .social img {
+  width: 30px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .about {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .about section {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .about section .left {
+    margin-bottom: 10px;
+  }
+  .about section .right .glass-box {
+    width: 500px;
+    margin: 0 auto;
+  }
+  .about section .right .glass-box .image img {
+    width: 100px;
+    height: 100px;
+  }
+  .about section .right .glass-box h2 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .about section .right .glass-box {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=About.css.map */

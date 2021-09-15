@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Contrail+One&family=Vampiro+One&display=swap");
+
+:root {
+  --base-border: #030163;
+  --font-color-1: #6e91ff;
+  --font-base: "Contrail One", cursive;
+  --font-2: "Vampiro One", cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+a {
+  text-decoration: none;
+  color: var(--font-color-1);
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background: #030018;
+  color: #fff;
+  margin-top: 100px;
+}
+
+/* .circle {
+  border-radius: 50%;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  right: 30%;
+  top: 100px;
+} */
+
+.line {
+  width: 90%;
+
+  height: 2px;
+  border-radius: 20px;
+  margin: 40px auto;
+}
+
+.red-pink {
+  background: linear-gradient(270.01deg, #ff00ff -2.9%, #d3664e 101.94%);
+}
+.blue-green {
+  background: linear-gradient(270.01deg, #0500ff -2.9%, #4ed36d 101.94%);
+}
+
+.details {
+  font-family: var(--font-base);
+  font-size: 24px;
+  line-height: 27px;
+}
+.head {
+  font-family: var(--font-base);
+  font-size: 58px;
+  background: linear-gradient(1.14deg, #00a8ff -4.76%, #ff00ff 67.61%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: linear-gradient(
+    152.97deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(60px);
+  border-radius: 52px;
+  padding: 10px 25px;
+  font-family: var(--font-2);
+  border: 2px solid #ff00ff;
+  font-size: 25px;
+  color: #fff;
+}
+.btn a {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .btn {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .head {
+    font-size: 30px;
+  }
+  .details {
+    font-size: 20px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.glass-box {
+  background: linear-gradient(
+    152.97deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(70px);
+  border: 1px solid aqua;
+  border-radius: 52px;
 }

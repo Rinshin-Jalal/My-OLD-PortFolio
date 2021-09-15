@@ -1,0 +1,80 @@
+.skills {
+  width: 80%;
+  margin: 20px auto;
+  margin-bottom: 60px;
+}
+
+.skills section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.skills section .right .glass-box {
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.skills section .right .glass-box .grp {
+  margin: 0 10px;
+}
+
+.skills section .right .glass-box .grp h1 {
+  font-family: var(--font-base);
+  font-size: 25px;
+  line-height: 38px;
+}
+
+.skills section .right .glass-box .grp .bar {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 30px;
+  height: 8px;
+  background: #bbb;
+}
+
+.skills section .right .glass-box .grp .bar .barscore {
+  background: #000;
+  height: 100%;
+  position: relative;
+  left: -1px;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  .skills {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .skills section {
+    gap: 10px;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .skills section .left,
+  .skills section .right {
+    width: 100%;
+  }
+  .skills section .left .glass-box,
+  .skills section .right .glass-box {
+    border-radius: 30px;
+    padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .skills section .left .glass-box .grp,
+  .skills section .right .glass-box .grp {
+    max-width: 700px;
+  }
+  .skills section .left .glass-box .grp .bar,
+  .skills section .right .glass-box .grp .bar {
+    margin: 10px auto;
+  }
+  .skills section .left {
+    padding: 20px;
+  }
+}
+/*# sourceMappingURL=Skills.css.map */
