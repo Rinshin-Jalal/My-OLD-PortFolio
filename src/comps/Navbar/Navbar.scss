@@ -11,7 +11,8 @@
   }
 
   nav {
-    background: #030018;
+    background: #15151d;
+    box-shadow: 0px 6px 30px #041f42;
     transition: 2s;
     // border-bottom: 1px solid #6e91ff;
     display: flex;
@@ -22,12 +23,9 @@
       display: flex;
       align-items: center;
       .logo {
-        width: 50px;
-      }
-      h1 {
+        font-family: Cookie;
+        font-size: 45px;
         color: #fff;
-        font-size: 40px;
-        margin-left: 20px;
       }
     }
     .navbar {
@@ -35,9 +33,15 @@
       a {
         margin-right: 20px;
         font-size: 26px;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        transition: 1s;
+        color: #0572ff;
+        font-family: var(--font-2);
         &:hover {
           font-size: 30px;
-          transition: 1s;
+
           color: #fff;
         }
       }
@@ -73,10 +77,8 @@
       }
       .logo-div {
         .logo {
-          width: 40px;
-        }
-        h1 {
           font-size: 30px;
+          margin: 0 20px;
         }
       }
       .navbar {

@@ -1,14 +1,16 @@
 .about {
-  width: 80%;
-  margin: 20px auto;
-  margin-bottom: 60px;
+  background: #011826;
+  padding: 30px 0px;
 }
 
 .about section {
+  width: 80%;
+  margin: 20px auto;
+  margin-bottom: 60px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1.2fr 1fr;
+      grid-template-columns: 1.2fr 1fr;
   gap: 40px;
 }
 
@@ -18,9 +20,10 @@
 }
 
 .about section .right .glass-box h2 {
-  font-family: var(--font-2);
-  font-size: 40px;
-  color: #c7c7c7;
+  font-family: var(--font-3);
+  font-size: 60px;
+  color: var(--font-color-1);
+  margin-bottom: 10px;
 }
 
 .about section .right .glass-box p {
@@ -30,12 +33,16 @@
 }
 
 .about section .right .glass-box .image img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #ebebeb;
+}
+
+.about section .right .glass-box .social {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .about section .right .glass-box .social img {
@@ -44,11 +51,9 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .about {
+  .about section {
     width: 90%;
     margin: 0 auto;
-  }
-  .about section {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
   }

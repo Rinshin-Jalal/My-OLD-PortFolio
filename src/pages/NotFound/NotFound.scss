@@ -1,24 +1,30 @@
-div {
+.notFoundmain {
+  width: 100%;
+  height: cal(100vh);
+
+  background-repeat: no-repeat;
+  background-size: 100%;
   .notfound {
-    width: 80%;
-    background: linear-gradient(
-      152.97deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
     backdrop-filter: blur(60px);
     border-radius: 16px;
-    font-family: var(--font-base);
+    font-family: var(--font-2);
     text-align: center;
     margin: 0 auto;
     padding: 20px;
+
     h1 {
-      text-shadow: 2px 2px 1px rgb(253, 80, 80);
-      color: rgb(255, 80, 80);
       font-size: 200px;
     }
     p {
       font-size: 60px;
+    }
+    a {
+      display: inline-block;
+      background: #011826;
+      border: 2px solid #74b3ec;
+      border-radius: 10px 15px;
+      padding: 10px 20px;
+      font-size: 30px;
     }
   }
 }

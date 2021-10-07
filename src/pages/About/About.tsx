@@ -8,14 +8,12 @@ import { motion } from "framer-motion";
 
 const headerVariants = {
   press: {
-    scale: 0.95,
-    rotate: -0.5,
-    y: -30,
+    scale: 0.905,
+    y: -15,
     transition: { duration: 0.5 },
   },
   hover: {
     scale: 1.05,
-    rotate: 0.5,
     transition: {
       duration: 0.5,
     },
@@ -24,7 +22,7 @@ const headerVariants = {
 
 const About = () => {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <section>
         <div className="left">
           <motion.h2
@@ -68,11 +66,17 @@ const About = () => {
             <motion.h2
               drag
               dragConstraints={{ left: 10, right: 10, top: 0, bottom: 0 }}
-              whileHover={{ rotate: 2, color: "white", scale: 1.1 }}
+              whileHover={{
+                color: "#fff",
+                scale: 1.01,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
             >
               Rinshin Jalal
             </motion.h2>
-            <motion.p whileHover={{ y: -1, color: "#ccc" }} whileTap={{ y: 1 }}>
+            <motion.p whileHover={{ y: -1, scale: 1.02 }} whileTap={{ y: 0.5 }}>
               Do you want to want to build something incredible with ReactJs and
               Backend? Reach Me
             </motion.p>
@@ -85,8 +89,8 @@ const About = () => {
               >
                 <motion.img
                   animate={{ rotate: 0 }}
-                  whileHover={{ rotate: [40, 0, -40] }}
-                  transition={{ yoyo: 10 }}
+                  whileHover={{ rotate: [90, 0, -90, 0] }}
+                  transition={{ repeat: 5, repeatType: "reverse" }}
                   src={Instagram}
                   alt="Instagram Profile"
                 />
@@ -99,7 +103,7 @@ const About = () => {
                 <motion.img
                   animate={{ rotate: 0 }}
                   whileHover={{ rotate: [40, 0, -40] }}
-                  transition={{ yoyo: 10 }}
+                  transition={{ repeat: 10, repeatType: "reverse" }}
                   src={Facebook}
                   alt="Facebook Profile"
                 />
@@ -112,7 +116,7 @@ const About = () => {
                 <motion.img
                   animate={{ rotate: 0 }}
                   whileHover={{ rotate: [40, 0, -40] }}
-                  transition={{ yoyo: 10 }}
+                  transition={{ repeat: 10, repeatType: "reverse" }}
                   src={Github}
                   alt="GitHub Profile"
                 />
@@ -125,7 +129,7 @@ const About = () => {
                 <motion.img
                   animate={{ rotate: 0 }}
                   whileHover={{ rotate: [40, 0, -40] }}
-                  transition={{ yoyo: 10 }}
+                  transition={{ repeat: 10, repeatType: "reverse" }}
                   src={Linkedin}
                   alt="LinkedIn Profile"
                 />

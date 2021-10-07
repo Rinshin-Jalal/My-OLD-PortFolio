@@ -1,15 +1,20 @@
 .contact {
-  width: 80%;
-  margin: 0 auto;
-  margin-bottom: 40px;
+  background: #011826;
+  padding: 30px 0px;
 }
 
 .contact section {
+  width: 80%;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1.2fr 1fr;
+      grid-template-columns: 1.2fr 1fr;
   gap: 30px;
+}
+
+.contact section .glass-box {
+  background: #000b12;
 }
 
 .contact section .left p {
@@ -17,27 +22,51 @@
 }
 
 .contact section .left input,
-.contact section .left textarea {
+.contact section .left textarea,
+.contact section .left button {
   padding: 10px;
   display: block;
   font-size: 18px;
   font-family: var(--font-base);
-  background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
-  -webkit-backdrop-filter: blur(60px);
-          backdrop-filter: blur(60px);
-  border-radius: 16px;
   width: 100%;
-  margin: 30px 0;
+  margin: 20px 0;
   outline: none;
+  -webkit-box-shadow: 4px 4px 30px rgba(0, 63, 103, 0.75);
+          box-shadow: 4px 4px 30px rgba(0, 63, 103, 0.75);
+  border-radius: 10px 20px;
   color: #fff;
-  border: 1px solid;
-  border-image-source: radial-gradient(69.43% 69.43% at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(60% 51.57% at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(54.8% 53% at 50% 50%, #151515 0%, rgba(21, 21, 21, 0) 100%);
+  background: #000b12;
+  border: none;
+}
+
+.contact section .left input::-webkit-input-placeholder,
+.contact section .left textarea::-webkit-input-placeholder,
+.contact section .left button::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.contact section .left input:-ms-input-placeholder,
+.contact section .left textarea:-ms-input-placeholder,
+.contact section .left button:-ms-input-placeholder {
+  color: #fff;
+}
+
+.contact section .left input::-ms-input-placeholder,
+.contact section .left textarea::-ms-input-placeholder,
+.contact section .left button::-ms-input-placeholder {
+  color: #fff;
+}
+
+.contact section .left input::placeholder,
+.contact section .left textarea::placeholder,
+.contact section .left button::placeholder {
+  color: #fff;
 }
 
 .contact section .left .resizables {
   display: -ms-grid;
   display: grid;
-  gap: 30px;
+  gap: 20px;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
 }
@@ -47,18 +76,18 @@
 }
 
 .contact section .right {
-  margin-top: 40px;
-  border-radius: 30px;
+  margin-top: 20%;
 }
 
-.contact section .right iframe {
-  border-radius: 30px;
-  width: 100%;
-  aspect-ratio: 1/1;
+.contact section .right div {
+  font-family: var(--font-2);
+  font-size: 30px;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
   .contact section {
+    width: 85%;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
   }
@@ -66,6 +95,12 @@
     -ms-grid-columns: auto;
         grid-template-columns: auto;
     gap: 20px;
+  }
+  .contact section .right {
+    margin-top: 0px;
+  }
+  .contact section .right h2 {
+    font-size: 26px;
   }
 }
 /*# sourceMappingURL=Contact.css.map */

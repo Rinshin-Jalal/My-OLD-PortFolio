@@ -29,19 +29,9 @@ const Navbar = () => {
       <nav>
         <div className="logo-div">
           <NavHashLink to="/#home" onClick={() => respochanger()}>
-            <motion.img
-              initial={{ scale: 0, rotate: -360 }}
-              animate={{ rotate: 0, scale: 1 }}
-              whileHover={{ rotate: [30, 0, -30, 0], scale: [1.1, 1, 1.1, 1] }}
-              transition={{
-                type: "spring",
-                stiffness: 260,
-                damping: 20,
-              }}
-              src="/logo.png"
-              alt="Logo"
-              className="logo"
-            />
+            <motion.h2 animate={{ scale: [0.8, 1] }} className="logo">
+              Rinshin Jalal
+            </motion.h2>
           </NavHashLink>
           <img
             src={Close}

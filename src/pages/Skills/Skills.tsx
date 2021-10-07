@@ -4,14 +4,12 @@ import { motion } from "framer-motion";
 
 const headerVariants = {
   press: {
-    scale: 0.95,
-    rotate: -0.5,
-    y: -30,
+    scale: 0.905,
+    y: -15,
     transition: { duration: 0.5 },
   },
   hover: {
     scale: 1.05,
-    rotate: 0.5,
     transition: {
       duration: 0.5,
     },
@@ -20,7 +18,7 @@ const headerVariants = {
 
 const Skills = () => {
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <section>
         <div className="left">
           <motion.h2
@@ -59,12 +57,12 @@ const Skills = () => {
                 <motion.div
                   initial={{ width: "0%" }}
                   animate={{ width: "75%" }}
-                  transition={{ duration: 7.5 }}
+                  transition={{ duration: 15 }}
                   className="barscore"
                   style={{
                     width: "75%",
                     background:
-                      "linear-gradient(270.01deg, #00FF94 -0.1%, #2400FF 104.74%)",
+                      "linear-gradient(270.01deg, #00FFFF -0.1%, #0029FF 104.74%)",
                   }}
                 ></motion.div>
               </div>
@@ -79,7 +77,7 @@ const Skills = () => {
                   transition={{ duration: 7 }}
                   style={{
                     background:
-                      "linear-gradient(270.06deg, #FFFF00 -16.45%, #FF7400 107.28%)",
+                      "linear-gradient(270.06deg, #FFFF00 -16.45%, #05FF00 107.28%)",
                   }}
                 ></motion.div>
               </div>
@@ -94,7 +92,7 @@ const Skills = () => {
                   className="barscore"
                   style={{
                     background:
-                      "linear-gradient(270.01deg, #FF006B -0.1%, #FF7400 104.74%)",
+                      "linear-gradient(270.01deg, #FF006B -0.1%, #FF6B00 104.74%)",
                   }}
                 ></motion.div>
               </div>
@@ -109,7 +107,7 @@ const Skills = () => {
                   className="barscore"
                   style={{
                     width: "60%",
-                    background: `linear-gradient(270.05deg, #00FF94 -3.15%, #DBFF00 124.3%)`,
+                    background: `linear-gradient(270.05deg, #00FF94 -3.15%, #00FFE0 124.3%)`,
                   }}
                 ></motion.div>
               </div>
