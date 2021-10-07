@@ -1,7 +1,5 @@
 import React from "react";
 import FadeIn from "../../comps/Fadein/FadeIn";
-import { ReactComponent as Github } from "../../icons/github.svg";
-import { ReactComponent as Web } from "../../icons/web.svg";
 import "./Projects.css";
 import { motion } from "framer-motion";
 
@@ -19,13 +17,16 @@ const Projects = () => {
             >
               <div className="article">
                 <motion.img
-                  animate={{ scale: 1, borderRadius: "16px" }}
-                  whileHover={{ scale: 1.1, borderRadius: 0 }}
+                  animate={{ scale: 1, borderRadius: "30px 5px" }}
+                  whileHover={{
+                    scale: 1.1,
+                    borderRadius: 0,
+                    border: "solid white 2px ",
+                  }}
                   src="/sir.png"
                   alt="Fasal Cheekode"
                 />
 
-                <Web title="Website" />
                 <div className="desc">
                   <h2>Fasal Cheekode</h2>
                   <p>A Coach's website with Blogging and Quiz features</p>
@@ -37,13 +38,16 @@ const Projects = () => {
             <a rel="noreferrer" href="https://hl.rinzhin.net" target="_blank">
               <div className="article">
                 <motion.img
-                  animate={{ scale: 1, borderRadius: "16px" }}
-                  whileHover={{ scale: 1.1, borderRadius: 0 }}
+                  animate={{ scale: 1, borderRadius: "30px 5px" }}
+                  whileHover={{
+                    scale: 1.1,
+                    borderRadius: 0,
+                    border: "solid white 2px ",
+                  }}
                   src="/rinz.png"
                   alt="RinzHighlights"
                 />
 
-                <Web title="Website" />
                 <div className="desc">
                   <h2>RinzHighlights</h2>
                   <p>Webapp to watch highlights of latest soccer matches</p>
@@ -59,13 +63,16 @@ const Projects = () => {
             >
               <div className="article">
                 <motion.img
-                  animate={{ scale: 1, borderRadius: "16px" }}
-                  whileHover={{ scale: 1.1, borderRadius: 0 }}
+                  animate={{ scale: 1, borderRadius: "30px 5px" }}
+                  whileHover={{
+                    scale: 1.1,
+                    borderRadius: 0,
+                    border: "solid white 2px ",
+                  }}
                   src="/pkhmct.png"
                   alt="PKHMCT website"
                 />
 
-                <Web title="Website" />
                 <div className="desc">
                   <h2>PKHM Charitable Trust</h2>
                   <p>PKHMCT - Users can get their data with their uid</p>
@@ -81,12 +88,15 @@ const Projects = () => {
             >
               <div className="article">
                 <motion.img
-                  animate={{ scale: 1, borderRadius: "16px" }}
-                  whileHover={{ scale: 1.1, borderRadius: 0 }}
+                  animate={{ scale: 1, borderRadius: "30px 5px" }}
+                  whileHover={{
+                    scale: 1.1,
+                    borderRadius: 0,
+                    border: "solid white 2px ",
+                  }}
                   src="/auto.jpg"
                   alt="DRF React Authentication Template"
                 />
-                <Github title="Github repository" />
                 <div className="desc">
                   <h2>DRF React Authentication Template</h2>
                   <p>Auth Template with DjangoRestFramework and ReactJs</p>

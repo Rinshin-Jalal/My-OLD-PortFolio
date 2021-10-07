@@ -12,13 +12,13 @@ const headerVariants = {
     transition: { duration: 1 },
   },
   press: {
-    scale: 0.95,
-    rotate: -0.5,
+    scale: 0.98,
+    rotate: -0.2,
     transition: { duration: 0.5 },
   },
   hover: {
-    scale: 1.05,
-    rotate: 0.5,
+    scale: 1.02,
+    rotate: 0.2,
     transition: {
       duration: 0.5,
     },
@@ -62,9 +62,7 @@ function Home() {
         >
           Hi,
           <br />
-          I'm
-          <img src="/logo.png" alt="" />
-          inshin Jalal,
+          I'm Rinshin Jalal,
           <br />
           FullStack Developer
         </motion.h1>
@@ -73,9 +71,10 @@ function Home() {
           whileHover="hover"
           whileTap={"press"}
         >
-          Django React / MERN stack FullStack Developer
+          Freelance Fullstack Web Developer
         </motion.h3>
-        <motion.p
+
+        <motion.button
           drag
           dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
           variants={btnVariants}
@@ -83,7 +82,7 @@ function Home() {
           className="btn"
         >
           <NavHashLink to="/#contact">Contact Me!</NavHashLink>
-        </motion.p>
+        </motion.button>
       </main>
     </div>
   );

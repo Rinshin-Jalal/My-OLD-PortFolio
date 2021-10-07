@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Contrail+One&family=Vampiro+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cantora+One&family=Cookie&family=VT323&display=swap");
 
 :root {
   --base-border: #030163;
-  --font-color-1: #6e91ff;
-  --font-base: "Contrail One", cursive;
-  --font-2: "Vampiro One", cursive;
+  --font-color-1: #0572ff;
+  --font-base: "Cantora One", sans-serif;
+  --font-2: "VT323", monospace;
+  --font-3: "Cookie", cursive;
 }
 
 * {
@@ -23,35 +24,9 @@ li {
 }
 
 body {
-  background: #030018;
+  background: #000b12;
   color: #fff;
   margin-top: 100px;
-}
-
-/* .circle {
-  border-radius: 50%;
-  background: #fff;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  z-index: 1;
-  right: 30%;
-  top: 100px;
-} */
-
-.line {
-  width: 90%;
-
-  height: 2px;
-  border-radius: 20px;
-  margin: 40px auto;
-}
-
-.red-pink {
-  background: linear-gradient(270.01deg, #ff00ff -2.9%, #d3664e 101.94%);
-}
-.blue-green {
-  background: linear-gradient(270.01deg, #0500ff -2.9%, #4ed36d 101.94%);
 }
 
 .details {
@@ -60,14 +35,13 @@ body {
   line-height: 27px;
 }
 .head {
-  font-family: var(--font-base);
+  font-family: var(--font-2);
   font-size: 58px;
-  background: linear-gradient(1.14deg, #00a8ff -4.76%, #ff00ff 67.61%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--font-color-1);
+  margin-bottom: 20px;
 }
 
-.btn {
+/* .btn {
   display: inline-block;
   margin-top: 20px;
   background: linear-gradient(
@@ -82,16 +56,15 @@ body {
   border: 2px solid #ff00ff;
   font-size: 25px;
   color: #fff;
-}
+}*/
 .btn a {
   color: #fff;
 }
-
 @media screen and (max-width: 768px) {
-  .btn {
+  /* .btn {
     margin-top: 10px;
     font-size: 20px;
-  }
+  } */
   .head {
     font-size: 30px;
   }
@@ -101,12 +74,10 @@ body {
 }
 
 .glass-box {
-  background: linear-gradient(
-    152.97deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: #011826;
   backdrop-filter: blur(70px);
-  border: 1px solid aqua;
   border-radius: 52px;
+  box-shadow: 4px 4px 30px rgba(25, 80, 115, 0.5);
+  border-radius: 60px 0px;
+  padding: 30px;
 }

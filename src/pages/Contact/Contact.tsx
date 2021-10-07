@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import { motion } from "framer-motion";
+import MailSvg from "../../icons/contact.svg";
+
+require("dotenv").config();
 
 const headerVariants = {
   press: {
-    scale: 0.95,
-    rotate: -0.5,
-    y: -30,
+    scale: 0.905,
+    y: -15,
     transition: { duration: 0.5 },
   },
   hover: {
     scale: 1.05,
-    rotate: 0.5,
     transition: {
       duration: 0.5,
     },
@@ -24,13 +25,6 @@ const btnVariants = {
   },
   pressed: {
     scale: 0.9,
-  },
-};
-
-const loadingVariants = {
-  animate: {
-    color: ["#fff", "#ccc", "#bbb", "#000"],
-    transition: { yoyo: Infinity },
   },
 };
 
@@ -51,13 +45,12 @@ const Contact = () => {
     formdata.append("message", message);
     setDisabled(true);
     setButton("");
-    fetch("https://serverinzhin.herokuapp.com/s/server/contact/", {
+    fetch(`${process.env.REACT_APP_API_URL}`, {
       method: "POST",
       body: formdata,
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setSubject("");
         setEmail("");
         setName("");
@@ -65,10 +58,14 @@ const Contact = () => {
         setDisabled(false);
         setButton("Send Message!");
       })
-      .catch((error) => console.log(error));
+      .catch((error) =>
+        console.log(
+          "Something Went Wrong \nAdd this as a Issue! in  it at Github Repo: https://github.com/Rinshin-Jalal/My-PortFolio"
+        )
+      );
   };
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <section>
         <div className="left">
           <motion.h1
@@ -94,14 +91,14 @@ const Contact = () => {
           <form onSubmit={onSubmit}>
             <div className="resizables">
               <motion.input
-                whileFocus={{ scale: 1.1, color: "white" }}
+                whileFocus={{ scale: 1.1, color: "#ffffff" }}
                 type="text"
                 value={name}
                 placeholder="Name"
                 onChange={(e) => setName(e.target.value)}
               />
               <motion.input
-                whileFocus={{ scale: 1.1, color: "white" }}
+                whileFocus={{ scale: 1.1, color: "#ffffff" }}
                 type="email"
                 placeholder="Email"
                 value={email}
@@ -110,14 +107,14 @@ const Contact = () => {
             </div>
 
             <motion.input
-              whileFocus={{ scale: 1.1, color: "white" }}
+              whileFocus={{ scale: 1.1, color: "#ffffff" }}
               type="text"
               placeholder="Subject"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
             />
             <motion.textarea
-              whileFocus={{ scale: 1.1, color: "white" }}
+              whileFocus={{ scale: 1.1, color: "#ffffff" }}
               placeholder="Message"
               cols={30}
               rows={10}
@@ -136,9 +133,14 @@ const Contact = () => {
               {button}
               {disabled && (
                 <motion.h4
-                  variants={loadingVariants}
-                  animate="animate"
-                  style={{ fontFamily: "var(--font-2)" }}
+                  animate={{
+                    color: ["#fff", "#ccc", "#bbb", "#000"],
+                    transition: {
+                      repeat: 5,
+                      repeatType: "reverse",
+                    },
+                  }}
+                  style={{ fontSize: "25px", fontFamily: "var(--font-2)" }}
                 >
                   Loading...
                 </motion.h4>
@@ -147,13 +149,12 @@ const Contact = () => {
           </form>
         </div>
         <div className="right">
-          <motion.iframe
-            whileHover={{ scale: 0.9 }}
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1159.2597465737904!2d76.33693566403824!3d11.120307929787174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1631615050127!5m2!1sen!2sin"
-            title="My Location - Karuvarakundu"
-            style={{ border: 0 }}
-            loading="lazy"
-          ></motion.iframe>
+          <div className="glass-box">
+            <motion.h2 whileHover={{ scale: 0.9 }}>
+              Feel Free To Contact me
+            </motion.h2>
+            <img src={MailSvg} alt="Feel Free to Contact me" />
+          </div>
         </div>
       </section>
     </div>

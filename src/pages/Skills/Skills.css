@@ -1,21 +1,23 @@
 .skills {
-  width: 80%;
-  margin: 20px auto;
   margin-bottom: 60px;
+  padding: 30px 0;
 }
 
 .skills section {
+  width: 80%;
+  margin: 20px auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1.2fr 1fr;
+      grid-template-columns: 1.2fr 1fr;
   gap: 30px;
   margin-bottom: 30px;
 }
 
 .skills section .right .glass-box {
-  border-radius: 30px;
-  padding: 20px;
+  margin-top: 30px;
+  background: #000b12;
+  padding: 30px;
 }
 
 .skills section .right .glass-box .grp {
@@ -31,25 +33,22 @@
 .skills section .right .glass-box .grp .bar {
   width: 100%;
   margin: 20px 0;
-  border-radius: 30px;
   height: 8px;
-  background: #bbb;
+  background: #fff;
 }
 
 .skills section .right .glass-box .grp .bar .barscore {
+  border-right: 2px solid black;
   background: #000;
   height: 100%;
   position: relative;
   left: -1px;
-  border-radius: 30px;
 }
 
 @media screen and (max-width: 1000px) {
-  .skills {
+  .skills section {
     width: 95%;
     margin: 0 auto;
-  }
-  .skills section {
     gap: 10px;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
@@ -60,8 +59,7 @@
   }
   .skills section .left .glass-box,
   .skills section .right .glass-box {
-    border-radius: 30px;
-    padding: 10px;
+    padding: 20px;
     width: 90%;
     margin: 0 auto;
   }
