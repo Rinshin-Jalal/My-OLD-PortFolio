@@ -57,7 +57,7 @@ const Skills = () => {
                 <motion.div
                   initial={{ width: "0%" }}
                   animate={{ width: "75%" }}
-                  transition={{ duration: 15 }}
+                  transition={{ duration: 7 }}
                   className="barscore"
                   style={{
                     width: "75%",
@@ -74,7 +74,7 @@ const Skills = () => {
                   className="barscore"
                   initial={{ width: "0%" }}
                   animate={{ width: "70%" }}
-                  transition={{ duration: 7 }}
+                  transition={{ duration: 4 }}
                   style={{
                     background:
                       "linear-gradient(270.06deg, #FFFF00 -16.45%, #05FF00 107.28%)",
@@ -88,7 +88,7 @@ const Skills = () => {
                 <motion.div
                   initial={{ width: "0%" }}
                   animate={{ width: "75%" }}
-                  transition={{ duration: 7.5 }}
+                  transition={{ duration: 4.5 }}
                   className="barscore"
                   style={{
                     background:
@@ -103,7 +103,7 @@ const Skills = () => {
                 <motion.div
                   initial={{ width: "0%" }}
                   animate={{ width: "60%" }}
-                  transition={{ duration: 6 }}
+                  transition={{ duration: 4 }}
                   className="barscore"
                   style={{
                     width: "60%",
