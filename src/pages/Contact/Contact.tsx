@@ -45,7 +45,7 @@ const Contact = () => {
     formdata.append("message", message);
     setDisabled(true);
     setButton("");
-    console.log(`${process.env.REACT_APP_API_URL}`);
+    console.log(`${process.env.REACT_APP_API_URL},error`);
     fetch(`${process.env.REACT_APP_API_URL}`, {
       method: "POST",
       body: formdata,
