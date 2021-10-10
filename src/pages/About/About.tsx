@@ -77,7 +77,7 @@ const About = () => {
               Rinshin Jalal
             </motion.h2>
             <motion.p whileHover={{ y: -1, scale: 1.02 }} whileTap={{ y: 0.5 }}>
-              Do you want to want to build something incredible with ReactJs and
+              Do you want to build something incredible with ReactJs and
               Backend? Reach Me
             </motion.p>
             <div className="social">
