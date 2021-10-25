@@ -38,20 +38,28 @@ const Contact = () => {
 
   const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    const formdata = new FormData();
-    formdata.append("name", name);
-    formdata.append("email", email);
-    formdata.append("subject", subject);
-    formdata.append("message", message);
+
     setDisabled(true);
     setButton("");
-    console.log(`${process.env.REACT_APP_API_URL},error`);
+    const body = {
+      content: `Someone Contacted`,
+      embeds: [
+        {
+          title: `${subject} | ${name}`,
+          description: `${message}\n\nHis email:${email}`,
+          color: 5814783,
+        },
+      ],
+    };
     fetch(`${process.env.REACT_APP_API_URL}`, {
       method: "POST",
-      body: formdata,
+      body: JSON.stringify(body),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
     })
-      .then((response) => response.json())
-      .then((data) => {
+      .then(() => {
         setSubject("");
         setEmail("");
         setName("");
@@ -59,11 +67,18 @@ const Contact = () => {
         setDisabled(false);
         setButton("Send Message!");
       })
-      .catch((error) =>
+      .catch((error) => {
         console.log(
-          "Something Went Wrong \nAdd this as a Issue! in  it at Github Repo: https://github.com/Rinshin-Jalal/My-PortFolio"
-        )
-      );
+          "Something Went Wrong \nAdd this as a Issue! in  it at Github Repo: https://github.com/Rinshin-Jalal/My-PortFolio\n",
+          error
+        );
+        setSubject("");
+        setEmail("");
+        setName("");
+        setMessage("");
+        setDisabled(false);
+        setButton("Send Message!");
+      });
   };
   return (
     <div className="contact" id="contact">
